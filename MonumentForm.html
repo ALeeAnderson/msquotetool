@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="form">
+		<button class="clearf" onclick="clears()">Clear Selection</button>
+		<label for="material">Material</label>
+		<select type="text" id="material" name="material">
+			<option value="1" disabled selected>Select Material</option>
+			<option value="Composite">Composite</option>
+			<option value="Pine">Pine</option>
+			<option value="Cedar">Cedar</option>
+			<option value="Mahogany">Mahogany</option>
+			<option value="Vinyl">Vinyl</option>
+		</select>
+		<label for="style">Style</label>
+		<select name="style" id="style" type="text">
+			<option value="1" disabled selected>Select Style</option>
+			<option value="Raised Panel">Raised Panel</option>
+			<option value="Flat Panel">Flat Panel</option>
+			<option value="Louvered">Louvered</option>
+			<option value="Combination (Lovered/Paneled)">Combination (Lovered/Paneled)</option>
+			<option value="Board and Batten">Board and Batten</option>
+			<option value="Bahama/Bermuda">Bahama/Bermuda</option>
+		</select>
+		<label for="finish">Finish</label>
+		<select name="finish" id="finish" type="text" onchange="finish()">
+			<option value="1" disabled selected>Select Finish</option>
+			<option value="Clear">Clear</option>
+			<option value="Primed">Primed</option>
+			<option value="Painted">Painted</option>
+		</select>
+		<label for="paint">Paint Color</label>
+		<select name="paint" id="paint" type="text">
+			<option value="1" disabled selected>Select Paint Color</option>
+		</select>
+		<label for="configuration">Configuration</label>
+		<select name="configuration" id="configuration">
+			<option value="1" disabled selected>Select Configuration</option>
+			<option value="Single">Single</option>
+			<option value="2 (50/50)">2 (50/50)</option>
+			<option value="2 (40/60)">2 (40/60)</option>
+			<option value="2 (60/40)">2 (60/40)</option>
+			<option value="3 (33/33/33)">3 (33/33/33)</option>
+			<option value="3 (20/40/40)">3 (20/40/40)</option>
+			<option value="3 (40/20/40)">3 (40/20/40)</option>
+			<option value="4 (25/25/25/25)">4 (25/25/25/25)</option>
+		</select>
+
+	</div>
+	<script>
+		function clears() {
+		  document.getElementById("material").value = "1";
+		  document.getElementById("style").value = "1";
+		  document.getElementById("finish").value = "1";
+		  document.getElementById("paint").innerHTML = "<option value=\"1\" disabled selected>Please Select A Finish First</option>";
+		  document.getElementById("paint").value = "1";
+		};
+		function finish() {
+			var fin = document.getElementById("finish").value;
+			var items;
+			var def = "";
+			if(fin === "Clear") {
+				items = ["Clear"];
+			} else if (fin === "Primed") {
+				items = ["Primed"];
+			} else if (fin === "Painted") {
+				items = ["Black","Bordeaux","Burgundy Red","Classic Blue","Clay","Federal Brown","Forest Green","Midnight Blue","Midnight Green","Musket Brown","Tuxedo Grey","Wedgewood Blue","Wicker","Wineberry","Black Forest Green","White","Charcoal Slate","Hamilton Blue","Chrome Green","Cottage Red","Tudor Brown","Country Redwood"];
+				def = "<option value=\"1\" disabled selected>Select Paint Color</option>";
+			}
+			var str = "";
+			for (var item of items) {
+			    str += "<option>" + item + "</option>"
+			}
+			str = def + str;
+			document.getElementById("paint").innerHTML = str;
+		}
+	</script>
+</body>
+</html>
