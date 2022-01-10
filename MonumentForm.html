@@ -7,58 +7,239 @@
 </head>
 <body>
 	<div id="form">
-		<button class="clearf" onclick="clears()">Clear Selection</button>
-		<label for="material">Material</label>
-		<select type="text" id="material" name="material">
-			<option value="1" disabled selected>Select Material</option>
-			<option value="Composite">Composite</option>
-			<option value="Pine">Pine</option>
-			<option value="Cedar">Cedar</option>
-			<option value="Mahogany">Mahogany</option>
-			<option value="Vinyl">Vinyl</option>
-		</select>
-		<label for="style">Style</label>
-		<select name="style" id="style" type="text">
-			<option value="1" disabled selected>Select Style</option>
-			<option value="Raised Panel">Raised Panel</option>
-			<option value="Flat Panel">Flat Panel</option>
-			<option value="Louvered">Louvered</option>
-			<option value="Combination (Lovered/Paneled)">Combination (Lovered/Paneled)</option>
-			<option value="Board and Batten">Board and Batten</option>
-			<option value="Bahama/Bermuda">Bahama/Bermuda</option>
-		</select>
-		<label for="finish">Finish</label>
-		<select name="finish" id="finish" type="text" onchange="finish()">
-			<option value="1" disabled selected>Select Finish</option>
-			<option value="Clear">Clear</option>
-			<option value="Primed">Primed</option>
-			<option value="Painted">Painted</option>
-		</select>
-		<label for="paint">Paint Color</label>
-		<select name="paint" id="paint" type="text">
-			<option value="1" disabled selected>Select Paint Color</option>
-		</select>
-		<label for="configuration">Configuration</label>
-		<select name="configuration" id="configuration">
-			<option value="1" disabled selected>Select Configuration</option>
-			<option value="Single">Single</option>
-			<option value="2 (50/50)">2 (50/50)</option>
-			<option value="2 (40/60)">2 (40/60)</option>
-			<option value="2 (60/40)">2 (60/40)</option>
-			<option value="3 (33/33/33)">3 (33/33/33)</option>
-			<option value="3 (20/40/40)">3 (20/40/40)</option>
-			<option value="3 (40/20/40)">3 (40/20/40)</option>
-			<option value="4 (25/25/25/25)">4 (25/25/25/25)</option>
-		</select>
-
+		<button class="clearf" onclick="clears()">Reset</button>
+		<div class="selectwrap">
+			<label for="material">Material</label>
+			<select class="formselect" type="text" id="material" name="material">
+				<option value="0" disabled selected>Select Material</option>
+				<option value="Composite">Composite</option>
+				<option value="Pine">Pine</option>
+				<option value="Cedar">Cedar</option>
+				<option value="Mahogany">Mahogany</option>
+				<option value="Vinyl">Vinyl</option>
+			</select>
+		</div>
+		<div class="selectwrap">
+			<label for="style">Style</label>
+			<select class="formselect" name="style" id="style" type="text">
+				<option value="0" disabled selected>Select Style</option>
+				<option value="Raised Panel">Raised Panel</option>
+				<option value="Flat Panel">Flat Panel</option>
+				<option value="Louvered">Louvered</option>
+				<option value="Combination (Lovered/Paneled)">Combination (Lovered/Paneled)</option>
+				<option value="Board and Batten">Board and Batten</option>
+				<option value="Bahama/Bermuda">Bahama/Bermuda</option>
+			</select>
+		</div>
+		<div class="selectwrap">
+			<label for="finish">Finish</label>
+			<select class="formselect" name="finish" id="finish" type="text" onchange="finish()">
+				<option value="0" disabled selected>Select Finish</option>
+				<option value="Clear">Clear</option>
+				<option value="Primed">Primed</option>
+				<option value="Painted">Painted</option>
+			</select>
+		</div>
+		<div class="selectwrap">
+			<label for="paint">Paint Color</label>
+			<select class="formselect" name="paint" id="paint" type="text">
+				<option value="0" disabled selected>Please Select A Finish First</option>
+			</select>
+		</div>
+		<div class="selectwrap">
+			<label for="configuration">Configuration</label>
+			<select class="formselect" name="configuration" id="configuration">
+				<option value="0" disabled selected>Select Configuration</option>
+				<option value="Single">Single</option>
+				<option value="2 (50/50)">2 (50/50)</option>
+				<option value="2 (40/60)">2 (40/60)</option>
+				<option value="2 (60/40)">2 (60/40)</option>
+				<option value="3 (33/33/33)">3 (33/33/33)</option>
+				<option value="3 (20/40/40)">3 (20/40/40)</option>
+				<option value="3 (40/20/40)">3 (40/20/40)</option>
+				<option value="4 (25/25/25/25)">4 (25/25/25/25)</option>
+			</select>
+		</div>
+		<div class="selectwrap">
+			<label for="function">Function</label>
+			<select name="function" id="function">
+				<option value="0" disabled selected>Select Function</option>
+				<option value="Funtioning">Funtioning</option>
+				<option value="Decorative">Decorative</option>
+				<option value="Fixed Mount">Fixed Mount</option>
+			</select>
+		</div>
+		<div>
+			<h2>Above section will be locked once you start adding shutters to the list (that + send email code removed from this preview)</h2>
+		</div>
+		<div class="sizewrap">
+			<label for="height">Height</label>
+			<select name="height" id="height">
+				<option value="0" disabled selected>Select Height</option>
+				<option value="15">15"</option>
+				<option value="16">16"</option>
+				<option value="17">17"</option>
+				<option value="18">18"</option>
+				<option value="19">19"</option>
+				<option value="20">20"</option>
+				<option value="21">21"</option>
+				<option value="22">22"</option>
+				<option value="23">23"</option>
+				<option value="24">24"</option>
+				<option value="25">25"</option>
+				<option value="26">26"</option>
+				<option value="27">27"</option>
+				<option value="28">28"</option>
+				<option value="29">29"</option>
+				<option value="30">30"</option>
+				<option value="31">31"</option>
+				<option value="32">32"</option>
+				<option value="33">33"</option>
+				<option value="34">34"</option>
+				<option value="35">35"</option>
+				<option value="36">36"</option>
+				<option value="37">37"</option>
+				<option value="38">38"</option>
+				<option value="39">39"</option>
+				<option value="40">40"</option>
+				<option value="41">41"</option>
+				<option value="42">42"</option>
+				<option value="43">43"</option>
+				<option value="44">44"</option>
+				<option value="45">45"</option>
+				<option value="46">46"</option>
+				<option value="47">47"</option>
+				<option value="48">48"</option>
+				<option value="49">49"</option>
+				<option value="50">50"</option>
+				<option value="51">51"</option>
+				<option value="52">52"</option>
+				<option value="53">53"</option>
+				<option value="54">54"</option>
+				<option value="55">55"</option>
+				<option value="56">56"</option>
+				<option value="57">57"</option>
+				<option value="58">58"</option>
+				<option value="59">59"</option>
+				<option value="60">60"</option>
+				<option value="61">61"</option>
+				<option value="62">62"</option>
+				<option value="63">63"</option>
+				<option value="64">64"</option>
+				<option value="65">65"</option>
+				<option value="66">66"</option>
+				<option value="67">67"</option>
+				<option value="68">68"</option>
+				<option value="69">69"</option>
+				<option value="70">70"</option>
+				<option value="71">71"</option>
+				<option value="72">72"</option>
+				<option value="73">73"</option>
+				<option value="74">74"</option>
+				<option value="75">75"</option>
+				<option value="76">76"</option>
+				<option value="77">77"</option>
+				<option value="78">78"</option>
+				<option value="79">79"</option>
+				<option value="80">80"</option>
+				<option value="81">81"</option>
+				<option value="82">82"</option>
+				<option value="83">83"</option>
+				<option value="84">84"</option>
+				<option value="85">85"</option>
+				<option value="86">86"</option>
+				<option value="87">87"</option>
+				<option value="88">88"</option>
+				<option value="89">89"</option>
+				<option value="90">90"</option>
+			</select>
+			<select name="hfrac" id="hfrac">
+				<option value="0">0"</option>
+				<option value="0.25">0.25"</option>
+				<option value="0.5">0.5"</option>
+				<option value="0.75">0.75"</option>
+			</select>
+		</div>
+		<div class="sizewrap">
+			<label for="width">Width</label>
+			<select name="width" id="width">
+				<option value="0" disabled selected>Select Width</option>
+				<option value="12">12"</option>
+				<option value="13">13"</option>
+				<option value="14">14"</option>
+				<option value="15">15"</option>
+				<option value="16">16"</option>
+				<option value="17">17"</option>
+				<option value="18">18"</option>
+				<option value="19">19"</option>
+				<option value="20">20"</option>
+				<option value="21">21"</option>
+				<option value="22">22"</option>
+				<option value="23">23"</option>
+				<option value="24">24"</option>
+				<option value="25">25"</option>
+				<option value="26">26"</option>
+				<option value="27">27"</option>
+				<option value="28">28"</option>
+				<option value="29">29"</option>
+				<option value="30">30"</option>
+				<option value="31">31"</option>
+				<option value="32">32"</option>
+				<option value="33">33"</option>
+				<option value="34">34"</option>
+				<option value="35">35"</option>
+				<option value="36">36"</option>
+				<option value="37">37"</option>
+				<option value="38">38"</option>
+				<option value="39">39"</option>
+				<option value="40">40"</option>
+				<option value="41">41"</option>
+				<option value="42">42"</option>
+				<option value="43">43"</option>
+				<option value="44">44"</option>
+				<option value="45">45"</option>
+				<option value="46">46"</option>
+				<option value="47">47"</option>
+				<option value="48">48"</option>
+				<option value="49">49"</option>
+				<option value="50">50"</option>
+				<option value="51">51"</option>
+			</select>
+			<select name="wfrac" id="wfrac">
+				<option value="0">0"</option>
+				<option value="0.25">0.25"</option>
+				<option value="0.5">0.5"</option>
+				<option value="0.75">0.75"</option>
+			</select>
+		</div>
+		<button class="addshutters" onclick="addshutters()">Add Shutter</button>
+		<div id="shutters">
+			
+		</div>
 	</div>
 	<script>
+		var scount = 0;
 		function clears() {
-		  document.getElementById("material").value = "1";
-		  document.getElementById("style").value = "1";
-		  document.getElementById("finish").value = "1";
-		  document.getElementById("paint").innerHTML = "<option value=\"1\" disabled selected>Please Select A Finish First</option>";
-		  document.getElementById("paint").value = "1";
+			scount = 0;
+		  // document.getElementById("material").value = "1";
+		  // document.getElementById("style").value = "1";
+		  // document.getElementById("finish").value = "1";
+		  document.getElementById("paint").innerHTML = "<option value=\"0\" disabled selected>Please Select A Finish First</option>";
+		  // document.getElementById("paint").value = "1";
+		  // document.getElementById("configuration").value = "1";
+		  // document.getElementById("function").value = "1";
+
+		  document.querySelectorAll('select').forEach(
+		      function( element ) {
+		          element.value = '0';
+		      }
+		  );
+			document.querySelectorAll('.pshutters').forEach(
+				function ( element ) {
+					element.remove();
+				}
+		 	);
+
 		};
 		function finish() {
 			var fin = document.getElementById("finish").value;
@@ -78,6 +259,31 @@
 			}
 			str = def + str;
 			document.getElementById("paint").innerHTML = str;
+		}
+		function addshutters() {
+			scount = scount+1;
+			var newshutter = "";
+			// document.querySelectorAll('select').forEach(
+		 //      function( element ) {
+		 //          // newshutter = newshutter + element.name + ":" + element.value + ";";
+		 //          eval('var ' + element.name + '= ' + element.value + ';');
+		 //      }
+		 //  	);
+		 	var mat = document.getElementById("material").value;
+		 	var sty = document.getElementById("style").value;
+		 	var fin = document.getElementById("finish").value;
+		 	var pai = document.getElementById("paint").value;
+		 	var con = document.getElementById("configuration").value;
+		 	var fun = document.getElementById("function").value;
+		 	var hei = document.getElementById("height").value *1;
+		 	var hfr = document.getElementById("hfrac").value *1;
+		 	var wid = document.getElementById("width").value *1;
+		 	var wfr = document.getElementById("wfrac").value *1;
+			const newele = document.createElement("p");
+			const node = document.createTextNode("Shutter #" + scount + ": " + fun + " " + mat + " " + con + " " + sty + " " + fin + " " + pai + ";  " + (wid+wfr) + "\"x" + (hei+hfr) + "\".");
+			newele.appendChild(node);
+			newele.setAttribute('class','pshutters');
+			document.getElementById("shutters").appendChild(newele);
 		}
 	</script>
 </body>
